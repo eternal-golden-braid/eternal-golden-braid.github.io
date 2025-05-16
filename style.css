@@ -1,0 +1,169 @@
+/* Inter Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Tailwind Custom Configuration (Illustrative - applied via JS or in a config file if using full Tailwind setup) */
+/* For this setup, we'll define custom properties and use them, or override Tailwind classes where necessary */
+:root {
+    --color-black: #000000;
+    --color-dodger-blue: #1098f7;
+    --color-white: #ffffff;
+    --color-rosy-brown: #b89e97;
+    --color-pale-dogwood: #decccc;
+
+    --font-sans: 'Inter', sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-pale-dogwood); /* Pale Dogwood background */
+    color: var(--color-black); /* Black text */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Enhanced Header & Footer (using Tailwind classes primarily in HTML) */
+/* Sticky header needs body padding if not handled by layout, but Tailwind's sticky usually manages this.
+   The .content-section-first-child padding is a more targeted approach. */
+
+/* Navigation Link Styling */
+.nav-link {
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smoother transitions */
+}
+.nav-link:hover {
+    /* color: var(--color-dodger-blue); /* Hover color for nav links in header */
+    /* background-color: rgba(255, 255, 255, 0.1); /* Subtle hover background for header nav */
+}
+.nav-link-active {
+    color: var(--color-dodger-blue) !important; /* Dodger Blue for active link */
+    font-weight: 600;
+}
+#mobile-menu a.nav-link-active { /* Specific for mobile active state */
+    background-color: var(--color-dodger-blue) !important;
+    color: var(--color-white) !important;
+}
+
+
+/* Main Content Area */
+.container { /* Ensure container is centered and has max-width, Tailwind handles this with mx-auto */
+    max-width: 1100px; /* Slightly wider for a more modern feel on larger screens */
+}
+
+/* Section Styling */
+.content-section {
+    background-color: var(--color-white); /* White background for content cards */
+    border-radius: 12px; /* Softer, more modern rounded corners */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07); /* Softer, more diffused shadow */
+    margin-bottom: 2.5rem; /* Increased spacing between sections */
+    padding: 2rem 2.5rem; /* More padding within sections */
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(20px); /* Initial state for animation */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content-section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Adjust padding for the first content section to account for sticky header */
+main > .content-section:first-child {
+  margin-top: 2rem; /* Add some space below the sticky header */
+}
+
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 700; /* Bolder headings */
+    letter-spacing: -0.02em; /* Slightly tighter letter spacing for headings */
+}
+h2.section-title { /* Class for main section titles */
+    color: var(--color-black);
+    padding-bottom: 0.75rem;
+    margin-bottom: 2rem; /* More space after title */
+    border-bottom: 2px solid var(--color-dodger-blue); /* Dodger blue accent */
+    display: inline-block; /* So border only spans the text width */
+}
+
+/* Buttons */
+.button-primary {
+    background-color: var(--color-dodger-blue);
+    color: var(--color-white);
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(16, 152, 247, 0.2); /* Subtle shadow for button */
+}
+.button-primary:hover {
+    background-color: #0e86d4; /* Darker Dodger Blue */
+    transform: translateY(-2px);
+}
+
+/* Card Styling (for portfolio, blog, learning updates) */
+.custom-card {
+    background-color: #f8f9fa; /* Slightly off-white for cards within sections, or var(--color-pale-dogwood) if preferred */
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.custom-card h3 {
+    color: var(--color-dodger-blue);
+    font-weight: 600;
+}
+.custom-card p {
+    color: #495057; /* Darker gray for card text */
+}
+.custom-card a {
+    color: var(--color-dodger-blue);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.custom-card a:hover {
+    color: #0e86d4; /* Darker Dodger Blue */
+}
+
+/* Form Elements Styling */
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid var(--color-rosy-brown); /* Rosy brown border */
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--color-dodger-blue);
+    box-shadow: 0 0 0 3px rgba(16, 152, 247, 0.15); /* Focus ring */
+    outline: none;
+}
+
+/* Footer specific enhancements (Tailwind classes in HTML will handle most) */
+footer a:hover {
+    color: var(--color-dodger-blue) !important; /* Ensure footer links use the accent color on hover */
+}
+
+/* Utility for placeholder images to ensure they fit well */
+.placeholder-img {
+    object-fit: cover;
+    border-radius: 8px; /* Match card rounding */
+}
+
+/* Responsive adjustments if needed beyond Tailwind */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 1.5rem;
+    }
+    h2.section-title {
+        font-size: 1.75rem; /* Slightly smaller titles on mobile */
+    }
+}

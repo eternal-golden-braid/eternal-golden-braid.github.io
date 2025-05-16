@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Your Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#decccc] text-[#000000] antialiased">
+
+    <header class="bg-[#000000] text-[#ffffff] shadow-lg sticky top-0 z-50"> <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold hover:text-[#1098f7] transition-colors">Your Name</a>
+                </div>
+                <nav class="hidden md:flex space-x-2"> <a href="index.html" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-opacity-10 hover:bg-white transition-colors nav-link">Home</a>
+                    <a href="about.html" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-opacity-10 hover:bg-white transition-colors nav-link">About Me</a>
+                    <a href="portfolio.html" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-opacity-10 hover:bg-white transition-colors nav-link">Portfolio</a>
+                    <a href="blog.html" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-opacity-10 hover:bg-white transition-colors nav-link">Blog</a>
+                    <a href="learning.html" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-opacity-10 hover:bg-white transition-colors nav-link">Learning</a>
+                    <a href="reachme.html" class="px-4 py-2 rounded-md text-sm font-medium hover:bg-opacity-10 hover:bg-white transition-colors nav-link">Reach Me</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-[#ffffff] hover:text-[#1098f7] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#1098f7] rounded-md p-2">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-[#1c1c1c] border-t border-gray-700"> <a href="index.html" class="block px-4 py-3 text-sm text-[#ffffff] hover:bg-[#333333] transition-colors nav-link-mobile">Home</a>
+            <a href="about.html" class="block px-4 py-3 text-sm text-[#ffffff] hover:bg-[#333333] transition-colors nav-link-mobile">About Me</a>
+            <a href="portfolio.html" class="block px-4 py-3 text-sm text-[#ffffff] hover:bg-[#333333] transition-colors nav-link-mobile">Portfolio</a>
+            <a href="blog.html" class="block px-4 py-3 text-sm text-[#ffffff] hover:bg-[#333333] transition-colors nav-link-mobile">Blog</a>
+            <a href="learning.html" class="block px-4 py-3 text-sm text-[#ffffff] hover:bg-[#333333] transition-colors nav-link-mobile">Learning</a>
+            <a href="reachme.html" class="block px-4 py-3 text-sm text-[#ffffff] hover:bg-[#333333] transition-colors nav-link-mobile">Reach Me</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <section id="about-content" class="content-section"> <h2 class="text-3xl md:text-4xl section-title">About Me</h2> <div class="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
+                <div class="md:col-span-2">
+                    <img src="https://placehold.co/600x600/decccc/000000?text=Your+Photo&font=inter" alt="Your Name" class="rounded-xl shadow-xl mx-auto w-full max-w-sm md:max-w-full placeholder-img"> </div>
+                <div class="md:col-span-3 text-neutral-800 space-y-5 text-base md:text-lg leading-relaxed"> <p>Hello! I'm <span class="font-semibold">[Your Name]</span>. Currently, I am a [Your Current Status, e.g., passionate Computer Science student at XYZ University, a dedicated research assistant focusing on ABC, or a lifelong learner avidly exploring new technologies].</p>
+                    <p>My academic and professional interests are deeply rooted in [mention 2-3 key interests, e.g., the transformative potential of artificial intelligence, the nuances of sustainable development, and the power of data-driven insights]. I am driven by an insatiable curiosity to unravel complex systems and a fervent desire to contribute to projects that create a tangible, positive impact.</p>
+                    <p>Beyond the world of academia and code, I find joy and balance in [mention a hobby or two, e.g., challenging myself with mountain hikes, expressing creativity through the piano, or collaborating on open-source initiatives]. This website is a curated space – a dynamic portfolio of my work, a reflective journal of my ongoing learning journey, and a bridge to connect with inspiring, like-minded individuals.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#000000] text-[#b89e97] py-12 text-center mt-16"> <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-sm mb-2">&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+            <p class="text-xs text-gray-400 mb-4"> Crafted with <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="hover:text-[#1098f7] transition-colors">Tailwind CSS</a> & a touch of digital enthusiasm.
+            </p>
+            <div class="mt-6 space-x-5">
+                <a href="mailto:your.email@example.com" class="text-gray-300 hover:text-[#1098f7] transition-colors text-sm">Email</a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-[#1098f7] transition-colors text-sm">GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-[#1098f7] transition-colors text-sm">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Intersection Observer for section animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.content-section');
+            const observerOptions = {
+                root: null, // relative to document viewport
+                rootMargin: '0px',
+                threshold: 0.1 // trigger when 10% of the section is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observerInstance) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('content-section-visible');
+                        observerInstance.unobserve(entry.target); // Optional: stop observing after animation
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
+
