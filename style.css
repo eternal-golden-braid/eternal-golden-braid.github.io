@@ -8,7 +8,7 @@
     --color-dodger-blue: #1098f7;
     --color-white: #ffffff;
     --color-rosy-brown: #b89e97;
-    --color-pale-dogwood: #decccc;
+    --color-pale-dogwood: #ffffff; /* Changed from #decccc to white */
 
     --font-sans: 'Inter', sans-serif;
 }
